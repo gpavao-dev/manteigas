@@ -466,3 +466,211 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateiga • Manteiga Artesanal Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+        .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1015/2000/1200'); background-size: cover; background-position: center; }
+        .card-hover:hover { transform: translateY(-12px); }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body class="bg-amber-50 text-amber-950">
+
+    <!-- NAV -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-800 rounded-2xl flex items-center justify-center text-white text-4xl">🧈</div>
+                <span class="text-3xl font-bold heading">Mateiga</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-lg font-medium">
+                <a href="#beneficios" class="hover:text-amber-700">Benefícios</a>
+                <a href="#produtos" class="hover:text-amber-700">Produtos</a>
+                <a href="#processo" class="hover:text-amber-700">Processo</a>
+                <a href="#onde" class="hover:text-amber-700">Entrega</a>
+                <a href="#saibamais" class="hover:text-amber-700">Saiba Mais</a>
+            </div>
+            <button onclick="abrirModalCompra()" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-2xl font-semibold">Comprar Agora</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center text-white pt-16">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-8xl heading font-bold leading-none mb-6">A melhor manteiga artesanal do Brasil</h1>
+            <p class="text-2xl mb-10">Feita com creme de leite fresco de vacas a pasto.</p>
+            <button onclick="abrirModalCompra()" class="bg-white text-amber-900 text-2xl font-semibold px-14 py-7 rounded-3xl hover:bg-amber-100">Comprar Agora</button>
+        </div>
+    </section>
+
+    <!-- PRODUTOS + COMPRA DIRETA -->
+    <section id="produtos" class="py-24 bg-amber-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl heading text-center mb-12">Escolha seu produto</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <img src="https://picsum.photos/id/870/800/500" class="w-full h-72 object-cover" alt="Tradicional">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold">Tradicional 250g</h3>
+                        <p class="text-amber-600">Com flor de sal</p>
+                        <div class="text-5xl font-bold my-6">R$ 49,90</div>
+                        <button onclick="selecionarProduto(1)" class="w-full bg-amber-700 text-white py-5 rounded-2xl font-semibold">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover relative">
+                    <div class="absolute top-6 right-6 bg-red-500 text-white px-5 py-2 rounded-full text-sm font-bold">MAIS VENDIDO</div>
+                    <img src="https://picsum.photos/id/1060/800/500" class="w-full h-72 object-cover" alt="Família">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold">Família 500g</h3>
+                        <p class="text-amber-600">Melhor custo-benefício</p>
+                        <div class="text-5xl font-bold my-6">R$ 89,90</div>
+                        <button onclick="selecionarProduto(2)" class="w-full bg-amber-700 text-white py-5 rounded-2xl font-semibold">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <img src="https://picsum.photos/id/133/800/500" class="w-full h-72 object-cover" alt="Kit">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold">Kit 3 Sabores</h3>
+                        <p class="text-amber-600">250g cada</p>
+                        <div class="text-5xl font-bold my-6">R$ 139,90</div>
+                        <button onclick="selecionarProduto(3)" class="w-full bg-amber-700 text-white py-5 rounded-2xl font-semibold">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAIBA MAIS -->
+    <section id="saibamais" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-5xl heading text-center mb-16">Saiba Mais Sobre a Mateiga</h2>
+            
+            <div class="prose prose-lg max-w-none text-amber-800">
+                <h3 class="text-3xl font-semibold mb-6">O que é Mateiga?</h3>
+                <p class="text-lg">Mateiga é uma manteiga artesanal premium produzida em pequenos lotes no interior de São Paulo. Utilizamos apenas creme de leite fresco de vacas criadas a pasto, sem aditivos químicos, corantes ou conservantes.</p>
+                
+                <img src="https://picsum.photos/id/201/1200/600" class="rounded-3xl my-12 w-full" alt="Processo de fabricação">
+                
+                <h3 class="text-3xl font-semibold mb-6">Benefícios da nossa manteiga</h3>
+                <ul class="list-disc pl-6 space-y-4 text-lg">
+                    <li><strong>Nutrientes naturais</strong>: Rica em vitaminas A, D, E e K.</li>
+                    <li><strong>Ácidos graxos benéficos</strong>: Contém CLA (conjugado linoleico) proveniente de vacas a pasto.</li>
+                    <li><strong>Sabor autêntico</strong>: Derrete na boca com um gosto cremoso e levemente doce.</li>
+                    <li><strong>Produção ética</strong>: Bem-estar animal e apoio a pequenos produtores locais.</li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-16 mb-6">Como usamos na cozinha</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-amber-50 p-8 rounded-3xl">
+                        <p class="font-semibold">• No pão fresquinho pela manhã</p>
+                        <p class="font-semibold">• Para finalizar carnes e legumes</p>
+                        <p class="font-semibold">• Em massas, bolos e cookies</p>
+                        <p class="font-semibold">• Para fazer ghee caseiro</p>
+                    </div>
+                    <img src="https://picsum.photos/id/431/800/500" class="rounded-3xl" alt="Manteiga na cozinha">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE COMPRA -->
+    <div id="modalCompra" class="modal">
+        <div class="bg-white rounded-3xl max-w-lg w-full mx-4 p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-bold">Finalizar Compra</h2>
+                <button onclick="fecharModal()" class="text-3xl">×</button>
+            </div>
+            
+            <div id="produtoSelecionado" class="mb-8"></div>
+            
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm mb-2">Quantidade</label>
+                    <input type="number" id="quantidade" value="1" min="1" class="w-full border rounded-2xl px-6 py-4 text-lg">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Nome completo</label>
+                    <input type="text" class="w-full border rounded-2xl px-6 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">WhatsApp</label>
+                    <input type="tel" placeholder="(11) 98765-4321" class="w-full border rounded-2xl px-6 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Endereço de entrega</label>
+                    <textarea class="w-full border rounded-3xl px-6 py-4 h-24"></textarea>
+                </div>
+            </div>
+            
+            <div class="mt-10 flex gap-4">
+                <button onclick="fecharModal()" class="flex-1 py-6 border border-amber-700 rounded-3xl font-semibold">Cancelar</button>
+                <button onclick="finalizarCompra()" class="flex-1 py-6 bg-amber-700 text-white rounded-3xl font-semibold">Confirmar Pedido</button>
+            </div>
+            <p class="text-center text-sm text-amber-600 mt-6">Pagamento via PIX • Entrega segura</p>
+        </div>
+    </div>
+
+    <!-- CTA e Footer -->
+    <section class="py-20 bg-amber-900 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl heading">Quer mais informações?</h2>
+            <p class="mt-6 text-xl">Fale conosco pelo WhatsApp</p>
+            <a href="https://wa.me/5511999999999" target="_blank" class="inline-block mt-8 bg-green-500 hover:bg-green-600 px-12 py-6 rounded-3xl text-2xl font-semibold">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="bg-amber-950 text-amber-300 py-12 text-center">
+        <p class="text-3xl heading text-white">Mateiga Premium</p>
+        <p>© 2026 - Manteiga Artesanal de Alta Qualidade</p>
+    </footer>
+
+    <script>
+        let produtoAtual = {};
+
+        function abrirModalCompra() {
+            document.getElementById('modalCompra').style.display = 'flex';
+            document.getElementById('produtoSelecionado').innerHTML = `
+                <p class="text-xl">Selecione um produto acima para continuar</p>
+            `;
+        }
+
+        function selecionarProduto(id) {
+            let produto = {};
+            if (id === 1) produto = {nome: "Mateiga Tradicional 250g", preco: 49.90};
+            else if (id === 2) produto = {nome: "Mateiga Família 500g", preco: 89.90};
+            else if (id === 3) produto = {nome: "Kit 3 Sabores", preco: 139.90};
+
+            produtoAtual = produto;
+            document.getElementById('modalCompra').style.display = 'flex';
+            document.getElementById('produtoSelecionado').innerHTML = `
+                <div class="flex justify-between items-center bg-amber-50 p-6 rounded-2xl">
+                    <div>
+                        <p class="font-semibold text-xl">${produto.nome}</p>
+                        <p class="text-3xl font-bold text-amber-700">R$ ${produto.preco}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function fecharModal() {
+            document.getElementById('modalCompra').style.display = 'none';
+        }
+
+        function finalizarCompra() {
+            alert("✅ Pedido recebido com sucesso! Em breve entraremos em contato via WhatsApp.");
+            fecharModal();
+        }
+    </script>
+</body>
+</html>
