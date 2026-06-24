@@ -247,3 +247,222 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateiga • Manteiga Artesanal Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover { transform: translateY(-12px); }
+    </style>
+</head>
+<body class="bg-amber-50 text-amber-950">
+
+    <!-- NAV -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-800 rounded-2xl flex items-center justify-center text-white text-4xl shadow-inner">🧈</div>
+                <span class="text-3xl font-bold heading tracking-tight">Mateiga</span>
+            </div>
+            <div class="hidden md:flex gap-10 text-lg font-medium">
+                <a href="#beneficios" class="hover:text-amber-700 transition">Benefícios</a>
+                <a href="#produtos" class="hover:text-amber-700 transition">Produtos</a>
+                <a href="#processo" class="hover:text-amber-700 transition">Nosso Processo</a>
+                <a href="#onde" class="hover:text-amber-700 transition">Entrega & Retirada</a>
+                <a href="#depoimentos" class="hover:text-amber-700 transition">Depoimentos</a>
+            </div>
+            <a href="#comprar" class="bg-amber-700 hover:bg-amber-800 text-white px-9 py-4 rounded-2xl font-semibold transition">Comprar Agora</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center text-white pt-16">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-lg px-8 py-3 rounded-full mb-6 text-sm tracking-widest">
+                <span class="text-amber-300">✦</span> ARTESANAL • LOCAL • PREMIUM
+            </div>
+            <h1 class="text-6xl md:text-8xl heading font-bold leading-none mb-8">
+                A manteiga que<br>eleva o sabor
+            </h1>
+            <p class="text-2xl max-w-2xl mx-auto mb-12">
+                Feita com creme de leite fresco de vacas criadas em pastagens no interior de São Paulo.
+            </p>
+            <a href="#comprar" class="inline-flex items-center gap-4 bg-white text-amber-900 hover:bg-amber-100 text-2xl font-semibold px-14 py-7 rounded-3xl transition shadow-xl">
+                <i class="fas fa-shopping-bag"></i>
+                Comprar por R$ 49,90
+            </a>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl heading text-center mb-16">Por que escolher Mateiga?</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center card-hover">
+                    <img src="https://picsum.photos/id/1077/800/600" class="rounded-3xl mx-auto mb-6 shadow-lg" alt="Vacas no pasto">
+                    <h3 class="text-2xl font-semibold mb-3">100% Natural</h3>
+                    <p class="text-amber-700">Sem aditivos, corantes ou conservantes.</p>
+                </div>
+                <div class="text-center card-hover">
+                    <img src="https://picsum.photos/id/201/800/600" class="rounded-3xl mx-auto mb-6 shadow-lg" alt="Manteiga cremosa">
+                    <h3 class="text-2xl font-semibold mb-3">Cremosa & Rica</h3>
+                    <p class="text-amber-700">Sabor intenso e textura perfeita.</p>
+                </div>
+                <div class="text-center card-hover">
+                    <img src="https://picsum.photos/id/292/800/600" class="rounded-3xl mx-auto mb-6 shadow-lg" alt="Fazenda">
+                    <h3 class="text-2xl font-semibold mb-3">Fazendas Locais</h3>
+                    <p class="text-amber-700">Apoio a produtores familiares brasileiros.</p>
+                </div>
+                <div class="text-center card-hover">
+                    <img src="https://picsum.photos/id/431/800/600" class="rounded-3xl mx-auto mb-6 shadow-lg" alt="Qualidade">
+                    <h3 class="text-2xl font-semibold mb-3">Produção Limitada</h3>
+                    <p class="text-amber-700">Feita em pequenos lotes para máxima qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="py-24 bg-amber-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl heading text-center mb-4">Nossos Produtos</h2>
+            <p class="text-center text-xl mb-12">Escolha o seu favorito</p>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <img src="https://picsum.photos/id/870/800/500" class="w-full h-72 object-cover" alt="Manteiga Tradicional">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold">Tradicional</h3>
+                        <p class="text-amber-600">250g • Clássica com flor de sal</p>
+                        <div class="text-5xl font-bold my-6">R$ 49,90</div>
+                        <a href="#comprar" class="block text-center bg-amber-700 text-white py-5 rounded-2xl font-semibold">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover relative">
+                    <div class="absolute top-6 right-6 bg-red-500 text-white text-sm font-bold px-5 py-2 rounded-full">MAIS VENDIDO</div>
+                    <img src="https://picsum.photos/id/1060/800/500" class="w-full h-72 object-cover" alt="Manteiga Família">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold">Família 500g</h3>
+                        <p class="text-amber-600">Melhor custo-benefício</p>
+                        <div class="text-5xl font-bold my-6">R$ 89,90</div>
+                        <a href="#comprar" class="block text-center bg-amber-700 text-white py-5 rounded-2xl font-semibold">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <img src="https://picsum.photos/id/133/800/500" class="w-full h-72 object-cover" alt="Kit Sabores">
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold">Kit 3 Sabores</h3>
+                        <p class="text-amber-600">Tradicional + Alho + Ervas Finas</p>
+                        <div class="text-5xl font-bold my-6">R$ 139,90</div>
+                        <a href="#comprar" class="block text-center bg-amber-700 text-white py-5 rounded-2xl font-semibold">Adicionar ao carrinho</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section id="processo" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl heading text-center mb-16">Do pasto ao pote</h2>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://picsum.photos/id/201/1200/800" class="rounded-3xl shadow-2xl" alt="Processo de produção de manteiga">
+                </div>
+                <div class="space-y-10 text-lg">
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🐄</div>
+                        <div><strong>1. Vacas felizes</strong><br>Vacas criadas a pasto no interior paulista.</div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🥛</div>
+                        <div><strong>2. Creme fresco</strong><br>Ordenha diária e seleção do melhor creme.</div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">🧈</div>
+                        <div><strong>3. Batedura artesanal</strong><br>Processo lento e manual para textura perfeita.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTREGA E RETIRADA -->
+    <section id="onde" class="py-24 bg-amber-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl heading mb-8">Entrega e Retirada</h2>
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-lg p-10 rounded-3xl">
+                    <i class="fas fa-truck text-5xl mb-6"></i>
+                    <h3 class="text-3xl font-semibold mb-4">Entrega para todo Brasil</h3>
+                    <p class="text-amber-100">Frete grátis acima de R$ 150<br>Chega em até 7 dias úteis</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg p-10 rounded-3xl">
+                    <i class="fas fa-store text-5xl mb-6"></i>
+                    <h3 class="text-3xl font-semibold mb-4">Retirada Local</h3>
+                    <p class="text-amber-100">São Paulo - Capital<br>Retire na nossa loja física no bairro Vila Madalena</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="py-24 bg-amber-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl heading text-center mb-16">O que nossos clientes falam</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow">
+                    <p class="italic text-lg">"Melhor manteiga da minha vida. Uso em tudo agora!"</p>
+                    <p class="mt-8 font-semibold">- Mariana Costa, São Paulo</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow">
+                    <p class="italic text-lg">"O sabor é incrível. Meus filhos pedem pão com manteiga o dia todo."</p>
+                    <p class="mt-8 font-semibold">- Ricardo Almeida, Rio de Janeiro</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow">
+                    <p class="italic text-lg">"Qualidade impecável e ainda apoio produtores locais. Parabéns!"</p>
+                    <p class="mt-8 font-semibold">- Letícia Mendes, Belo Horizonte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="comprar" class="py-28 bg-gradient-to-br from-amber-700 to-amber-900 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-6xl heading mb-8">Está pronto para o melhor sabor?</h2>
+            <p class="text-2xl mb-12">Garanta sua Mateiga hoje e sinta a diferença</p>
+            <a href="#" onclick="alert('Redirecionando para o checkout...')" 
+               class="inline-block bg-white text-amber-900 text-3xl font-bold px-20 py-10 rounded-3xl hover:bg-amber-100 transition shadow-2xl">
+                Comprar Agora
+            </a>
+            <p class="mt-10 text-amber-200">✅ 30 dias de garantia • Embalagem térmica • Apoie o produtor local</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-amber-950 text-amber-300 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-4xl heading text-white mb-4">Mateiga Premium</p>
+            <p class="mb-8">Manteiga artesanal • Feita com amor no Brasil</p>
+            <p>© 2026 Mateiga - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+</body>
+</html>
